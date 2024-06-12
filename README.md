@@ -1,1 +1,1 @@
-# swing_trading
+# Stocks_daily_run
