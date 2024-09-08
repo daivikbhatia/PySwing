@@ -1,0 +1,276 @@
+#
+# License: See LICENSE.md file
+# GitHub: https://github.com/daivikbhatia/swing_trading
+#
+import traceback
+import talib
+import pandas as pd
+from datetime import datetime, timedelta
+
+
+class DataHandler:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def log_error(e):
+        tb = traceback.TracebackException.from_exception(e)
+        error_details = {
+            "file_name": tb.stack[-1].filename,
+            "line_number": tb.stack[-1].lineno,
+            "error_message": str(e),
+            "stack_trace": ''.join(tb.format())
+        }
+        print(f"Error in file '{error_details['file_name']}', line {error_details['line_number']}: {error_details['error_message']}")
+        print(f"Stack trace:\n{error_details['stack_trace']}")
+    
+    @staticmethod
+    def symbol_maker(stocks_file):
+        nse = pd.read_csv(stocks_file)
+        nse_list = list(nse["Symbol"])
+        nse_list_final = []
+
+        for i in nse_list:
+            i = str(i)
+            j = i + ".NS"
+            nse_list_final.append(j)
+        return nse_list_final
+    
+    @staticmethod
+    def preprocess_data(df):
+        df = df.dropna()
+        df["is_5_rising"] = df["is_5_rising"].astype(float)
+        df["is_20_rising"] = df["is_20_rising"].astype(float)
+        return df
+
+    @staticmethod
+    def split_date(date_str):
+        date = str(date_str).split()[0]
+        return pd.to_datetime(date)
+    
+    @staticmethod
+    def calculate_week_and_day(df):
+        df["date"] = pd.to_datetime(df["date"])
+        df["week_number"] = df["date"].apply(lambda x: x.isocalendar()[1])
+        df["day_number"] = df["date"].apply(lambda x: x.isocalendar()[2])
+        return df
+    
+    @staticmethod
+    def date_20_days_from_now():
+        today = datetime.today()
+        past_date = today - timedelta(days=20)
+        return past_date.strftime('%Y-%m-%d')
+    
+    @staticmethod
+    def add_hpt(temp):
+        temp["hpt_sma"] = "empty"
+        temp.reset_index(drop=True, inplace=True)
+        for index, row in temp.iterrows():
+            hpt = []
+            hpt.append(row["sma"])
+            hpt.append(row["ema"])
+            temp.loc[index, "hpt_sma"] = str(hpt)
+        return temp
+    
+    @staticmethod
+    def reset_dataFrames():
+        pd.DataFrame(columns= ['week_number', 'stockName', 'date', 'budget', 'loss_affordable',
+       'number_of_loses', 'per_trade_loss', 'stock_entry', 'stop_loss',
+       'rupee_stop', 'quantity', 'target', 'total_buy_amount',
+       'total_buy_with_leverage', 'total_profit', 'new_target', 'result',
+       'result_close_price', 'stopLoss_list', 'exit_time', 'day_number',
+       'time', 'exit_result', 'day', 'hpt_list']).to_csv("../data/processed/main_buyit.csv")
+
+        pd.DataFrame(columns= ['total_income', 'pl_ratio', 'profit_count', 'loss_count', 'exit_count',
+       'sma', 'ema', 'sma_len', 'ema_len', 'atr_rot', 'year']).to_csv("../data/processed/investment_results.csv")
+
+        pd.DataFrame(columns= ['week_number', 'stockName', 'date', 'budget', 'loss_affordable',
+       'number_of_loses', 'per_trade_loss', 'stock_entry', 'stop_loss',
+       'rupee_stop', 'quantity', 'target', 'total_buy_amount',
+       'total_buy_with_leverage', 'total_profit', 'new_target', 'result',
+       'result_close_price', 'stopLoss_list', 'exit_time', 'day_number',
+       'time', 'exit_result', 'day', 'total_income', 'pl_ratio',
+       'profit_count', 'loss_count', 'exit_count', 'current_month', 'hpts',
+       'year']).to_csv("../data/processed/backtest_monthly.csv")    
+
+
+class Strategy(DataHandler):
+    def __init__(self, sma, ema, atr_rot, sma_len, ema_len, before_co):
+        super().__init__()
+        self.sma = sma
+        self.ema = ema
+        self.atr_rot = atr_rot
+        self.sma_len = sma_len
+        self.ema_len = ema_len
+        self.before_co = before_co
+
+
+    def moving_average_crossover_signal(self, MA_44, MA_200, window=4, percentage_margin=0.015):
+        try:
+            crossover_signal = False 
+            #print("this is BEFORE CO",self.before_co)
+            if self.before_co == True:
+                stock_price = (MA_44 + MA_200) / 2.0
+                margin = percentage_margin * stock_price
+                for i in range(1, window + 1):
+                    if (
+                        MA_44.iloc[-i] + margin.iloc[-i] > MA_200.iloc[-i]
+                        and MA_44.iloc[-i - 1] <= MA_200.iloc[-i - 1]
+                    ):
+                        crossover_signal = True 
+                        break  
+            elif self.before_co == False:
+                for i in range(1, window + 1):
+                    if (
+                        MA_44.iloc[-i] > MA_200.iloc[-i]
+                        and MA_44.iloc[-i - 1] <= MA_200.iloc[-i - 1]
+                    ):
+                        crossover_signal = (
+                            True 
+                        )
+                        break  
+        except Exception as e:
+            DataHandler.log_error(e)
+
+        return crossover_signal
+    
+    @staticmethod
+    def adx_signal(data):
+        try:
+            adx = talib.ADX(data["High"], data["Low"], data["Close"], timeperiod=14)
+
+        except Exception as e:
+            DataHandler.log_error(e)       
+
+        return adx.iloc[-1] > 22
+    
+    @staticmethod
+    def di_signals(data, buy_flag=True):
+        try:
+            plus_di = talib.PLUS_DI(data["High"], data["Low"], data["Close"], timeperiod=14)
+            minus_di = talib.MINUS_DI(data["High"], data["Low"], data["Close"], timeperiod=14)
+            if buy_flag:
+                return plus_di.iloc[-1] > 22 and minus_di.iloc[-1] < plus_di.iloc[-1]
+            else:
+                return minus_di.iloc[-1] > 22 and minus_di.iloc[-1] > plus_di.iloc[-1]
+        except Exception as e:
+            DataHandler.log_error(e)
+
+    @staticmethod    
+    def split_date(x):
+        x = str(x)
+        date = x.split()[0]
+        date = pd.to_datetime(date)
+        return date
+    
+    @staticmethod
+    def is_always_falling_with_small_lows(lis, rot_ind):
+        try:
+            for i in range(1, len(lis)):
+                if lis[i] > lis[i - 1]:
+                    return False
+            return True
+        except Exception as e:
+            DataHandler.log_error(e)
+    
+    @staticmethod
+    def is_always_rising_with_small_lows(data, lis, base, rot_ind=0.01):
+        try:
+            fin_res = 0
+            rising_array = []
+            for i in range(1, len(lis)):
+                if lis[i] > lis[i - 1]:
+                    rising_array.append(1)
+                else:
+                    rising_array.append(0)
+            rising_avg = sum(rising_array) / len(rising_array)
+            if rising_array[-1] == 0:
+                fin_res = 0
+            elif rising_array[-2] == 0:
+                fin_res = 0
+            else:
+                fin_res = rising_avg
+
+            return float(fin_res)
+        except Exception as e:
+            DataHandler.log_error(e)
+
+    @staticmethod
+    def sma_builder(x):
+        y = []
+        x = eval(x)
+        y.append(x[0])
+        y.append(x[1])
+        return str(y)
+
+    @staticmethod
+    def net_change_fn(df):
+        res_df = pd.DataFrame()
+        for stockName in list(df["stock"].unique()):
+            temp_df = df.loc[df["stock"] == stockName]
+            temp_df["net_change"] = temp_df["Close"].pct_change()
+            res_df = pd.concat([res_df, temp_df])
+        return res_df
+    
+    def test(self, meaw, atr_rot):
+        res = meaw + atr_rot
+        return res
+    
+    def investment(self,df,atr_rot):
+        try:
+            df["stockName"] = df["ticker_name"]
+            df["budget"] = 45000
+            df["loss_affordable"] = 10000
+            df["number_of_loses"] = 10
+            df["per_trade_loss"] = df["loss_affordable"] / df["number_of_loses"]
+            df["stock_entry"] = df["Close"]
+            df["stop_loss"] = df["Low"] - (atr_rot * df["atr_value"])
+            df["rupee_stop"] = df["stock_entry"] - df["stop_loss"]
+            df["quantity"] = df["per_trade_loss"] / df["rupee_stop"]
+            df["target"] = df["stock_entry"] + (2 * df["rupee_stop"])
+            df["total_buy_amount"] = df["stock_entry"] * df["quantity"]
+            df["total_buy_with_leverage"] = df["total_buy_amount"] / 5
+            df["total_profit"] = (df["target"] - df["stock_entry"]) * df["quantity"]
+
+            try:
+                result_df = df[
+                    [
+                        "Date",
+                        "stockName",
+                        "budget",
+                        "loss_affordable",
+                        "number_of_loses",
+                        "per_trade_loss",
+                        "stock_entry",
+                        "stop_loss",
+                        "rupee_stop",
+                        "quantity",
+                        "target",
+                        "total_buy_amount",
+                        "total_buy_with_leverage",
+                        "total_profit",
+                    ]
+                ]
+            except:
+                result_df = df[
+                    [
+                        "date",
+                        "stockName",
+                        "budget",
+                        "loss_affordable",
+                        "number_of_loses",
+                        "per_trade_loss",
+                        "stock_entry",
+                        "stop_loss",
+                        "rupee_stop",
+                        "quantity",
+                        "target",
+                        "total_buy_amount",
+                        "total_buy_with_leverage",
+                        "total_profit",
+                    ]
+                ]
+            return result_df
+        
+        except Exception as e:
+            DataHandler.log_error(e)

@@ -1,0 +1,502 @@
+,Company Name,Industry,stock
+0,360 ONE WAM Ltd.,Financial Services,360ONE.NS
+1,3M India Ltd.,Diversified,3MINDIA.NS
+2,ABB India Ltd.,Capital Goods,ABB.NS
+3,ACC Ltd.,Construction Materials,ACC.NS
+4,AIA Engineering Ltd.,Capital Goods,AIAENG.NS
+5,APL Apollo Tubes Ltd.,Capital Goods,APLAPOLLO.NS
+6,AU Small Finance Bank Ltd.,Financial Services,AUBANK.NS
+7,Aarti Drugs Ltd.,Healthcare,AARTIDRUGS.NS
+8,Aarti Industries Ltd.,Chemicals,AARTIIND.NS
+9,Aavas Financiers Ltd.,Financial Services,AAVAS.NS
+10,Abbott India Ltd.,Healthcare,ABBOTINDIA.NS
+11,Adani Enterprises Ltd.,Metals & Mining,ADANIENT.NS
+12,Adani Green Energy Ltd.,Power,ADANIGREEN.NS
+13,Adani Ports and Special Economic Zone Ltd.,Services,ADANIPORTS.NS
+14,Adani Power Ltd.,Power,ADANIPOWER.NS
+15,Adani Total Gas Ltd.,Oil Gas & Consumable Fuels,ATGL.NS
+16,Adani Transmission Ltd.,Power,ADANIENSOL.NS
+17,Adani Wilmar Ltd.,Fast Moving Consumer Goods,AWL.NS
+18,Aditya Birla Capital Ltd.,Financial Services,ABCAPITAL.NS
+19,Aditya Birla Fashion and Retail Ltd.,Consumer Services,ABFRL.NS
+20,Aegis Logistics Ltd.,Oil Gas & Consumable Fuels,AEGISCHEM.NS
+21,Aether Industries Ltd.,Chemicals,AETHER.NS
+22,Affle (India) Ltd.,Information Technology,AFFLE.NS
+23,Ajanta Pharmaceuticals Ltd.,Healthcare,AJANTPHARM.NS
+24,Alembic Pharmaceuticals Ltd.,Healthcare,APLLTD.NS
+25,Alkem Laboratories Ltd.,Healthcare,ALKEM.NS
+26,Alkyl Amines Chemicals Ltd.,Chemicals,ALKYLAMINE.NS
+27,Amara Raja Batteries Ltd.,Automobile and Auto Components,AMARAJABAT.NS
+28,Amber Enterprises India Ltd.,Consumer Durables,AMBER.NS
+29,Ambuja Cements Ltd.,Construction Materials,AMBUJACEM.NS
+30,Angel One Ltd.,Financial Services,ANGELONE.NS
+31,Anupam Rasayan India Ltd.,Chemicals,ANURAS.NS
+32,Apar Industries Ltd.,Capital Goods,APARINDS.NS
+33,Apollo Hospitals Enterprise Ltd.,Healthcare,APOLLOHOSP.NS
+34,Apollo Tyres Ltd.,Automobile and Auto Components,APOLLOTYRE.NS
+35,Aptus Value Housing Finance India Ltd.,Financial Services,APTUS.NS
+36,Archean Chemical Industries Ltd.,Chemicals,ACI.NS
+37,Asahi India Glass Ltd.,Automobile and Auto Components,ASAHIINDIA.NS
+38,Ashok Leyland Ltd.,Capital Goods,ASHOKLEY.NS
+39,Asian Paints Ltd.,Consumer Durables,ASIANPAINT.NS
+40,Aster DM Healthcare Ltd.,Healthcare,ASTERDM.NS
+41,Astral Ltd.,Capital Goods,ASTRAL.NS
+42,Atul Ltd.,Chemicals,ATUL.NS
+43,Aurobindo Pharma Ltd.,Healthcare,AUROPHARMA.NS
+44,Avanti Feeds Ltd.,Fast Moving Consumer Goods,AVANTIFEED.NS
+45,Avenue Supermarts Ltd.,Consumer Services,DMART.NS
+46,Axis Bank Ltd.,Financial Services,AXISBANK.NS
+47,BASF India Ltd.,Chemicals,BASF.NS
+48,BEML Ltd.,Capital Goods,BEML.NS
+49,BLS International Services Ltd.,Consumer Services,BLS.NS
+50,BSE Ltd.,Financial Services,BSE.NS
+51,Bajaj Auto Ltd.,Automobile and Auto Components,BAJAJ-AUTO.NS
+52,Bajaj Finance Ltd.,Financial Services,BAJFINANCE.NS
+53,Bajaj Finserv Ltd.,Financial Services,BAJAJFINSV.NS
+54,Bajaj Holdings & Investment Ltd.,Financial Services,BAJAJHLDNG.NS
+55,Balaji Amines Ltd.,Chemicals,BALAMINES.NS
+56,Balkrishna Industries Ltd.,Automobile and Auto Components,BALKRISIND.NS
+57,Balrampur Chini Mills Ltd.,Fast Moving Consumer Goods,BALRAMCHIN.NS
+58,Bandhan Bank Ltd.,Financial Services,BANDHANBNK.NS
+59,Bank of Baroda,Financial Services,BANKBARODA.NS
+60,Bank of India,Financial Services,BANKINDIA.NS
+61,Bank of Maharashtra,Financial Services,MAHABANK.NS
+62,Bata India Ltd.,Consumer Durables,BATAINDIA.NS
+63,Bayer Cropscience Ltd.,Chemicals,BAYERCROP.NS
+64,Berger Paints India Ltd.,Consumer Durables,BERGEPAINT.NS
+65,Bharat Dynamics Ltd.,Capital Goods,BDL.NS
+66,Bharat Electronics Ltd.,Capital Goods,BEL.NS
+67,Bharat Forge Ltd.,Capital Goods,BHARATFORG.NS
+68,Bharat Heavy Electricals Ltd.,Capital Goods,BHEL.NS
+69,Bharat Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,BPCL.NS
+70,Bharti Airtel Ltd.,Telecommunication,BHARTIARTL.NS
+71,Bikaji Foods International Ltd.,Fast Moving Consumer Goods,BIKAJI.NS
+72,Biocon Ltd.,Healthcare,BIOCON.NS
+73,Birla Corporation Ltd.,Construction Materials,BIRLACORPN.NS
+74,Birlasoft Ltd.,Information Technology,BSOFT.NS
+75,Blue Dart Express Ltd.,Services,BLUEDART.NS
+76,Blue Star Ltd.,Consumer Durables,BLUESTARCO.NS
+77,Bombay Burmah Trading Corporation Ltd.,Fast Moving Consumer Goods,BBTC.NS
+78,Borosil Renewables Ltd.,Capital Goods,BORORENEW.NS
+79,Bosch Ltd.,Automobile and Auto Components,BOSCHLTD.NS
+80,Brigade Enterprises Ltd.,Realty,BRIGADE.NS
+81,Brightcom Group Ltd.,Information Technology,BCG.NS
+82,Britannia Industries Ltd.,Fast Moving Consumer Goods,BRITANNIA.NS
+83,C.E. Info Systems Ltd.,Information Technology,MAPMYINDIA.NS
+84,CCL Products (I) Ltd.,Fast Moving Consumer Goods,CCL.NS
+85,CESC Ltd.,Power,CESC.NS
+86,CG Power and Industrial Solutions Ltd.,Capital Goods,CGPOWER.NS
+87,CIE Automotive India Ltd.,Automobile and Auto Components,CIEINDIA.NS
+88,CRISIL Ltd.,Financial Services,CRISIL.NS
+89,CSB Bank Ltd.,Financial Services,CSBBANK.NS
+90,Campus Activewear Ltd.,Consumer Durables,CAMPUS.NS
+91,Can Fin Homes Ltd.,Financial Services,CANFINHOME.NS
+92,Canara Bank,Financial Services,CANBK.NS
+93,Capri Global Capital Ltd.,Financial Services,CGCL.NS
+94,Carborundum Universal Ltd.,Capital Goods,CARBORUNIV.NS
+95,Castrol India Ltd.,Oil Gas & Consumable Fuels,CASTROLIND.NS
+96,Ceat Ltd.,Automobile and Auto Components,CEATLTD.NS
+97,Central Bank of India,Financial Services,CENTRALBK.NS
+98,Central Depository Services (India) Ltd.,Financial Services,CDSL.NS
+99,Century Plyboards (India) Ltd.,Consumer Durables,CENTURYPLY.NS
+100,Century Textile & Industries Ltd.,Forest Materials,CENTURYTEX.NS
+101,Cera Sanitaryware Ltd,Consumer Durables,CERA.NS
+102,Chalet Hotels Ltd.,Consumer Services,CHALET.NS
+103,Chambal Fertilizers & Chemicals Ltd.,Chemicals,CHAMBLFERT.NS
+104,Chemplast Sanmar Ltd.,Chemicals,CHEMPLASTS.NS
+105,Cholamandalam Financial Holdings Ltd.,Financial Services,CHOLAHLDNG.NS
+106,Cholamandalam Investment and Finance Company,Financial Services,CHOLAFIN.NS
+107,Cipla Ltd.,Healthcare,CIPLA.NS
+108,City Union Bank Ltd.,Financial Services,CUB.NS
+109,Clean Science and Technology Ltd.,Chemicals,CLEAN.NS
+110,Coal India Ltd.,Oil Gas & Consumable Fuels,COALINDIA.NS
+111,Cochin Shipyard Ltd.,Capital Goods,COCHINSHIP.NS
+112,Coforge Ltd.,Information Technology,COFORGE.NS
+113,Colgate Palmolive (India) Ltd.,Fast Moving Consumer Goods,COLPAL.NS
+114,Computer Age Management Services Ltd.,Financial Services,CAMS.NS
+115,Container Corporation of India Ltd.,Services,CONCOR.NS
+116,Coromandel International Ltd.,Chemicals,COROMANDEL.NS
+117,Craftsman Automation Ltd.,Automobile and Auto Components,CRAFTSMAN.NS
+118,CreditAccess Grameen Ltd.,Financial Services,CREDITACC.NS
+119,Crompton Greaves Consumer Electricals Ltd.,Consumer Durables,CROMPTON.NS
+120,Cummins India Ltd.,Capital Goods,CUMMINSIND.NS
+121,Cyient Ltd.,Information Technology,CYIENT.NS
+122,DCM Shriram Ltd.,Diversified,DCMSHRIRAM.NS
+123,DLF Ltd.,Realty,DLF.NS
+124,Dabur India Ltd.,Fast Moving Consumer Goods,DABUR.NS
+125,Dalmia Bharat Ltd.,Construction Materials,DALBHARAT.NS
+126,Data Patterns (India) Ltd.,Capital Goods,DATAPATTNS.NS
+127,Deepak Fertilisers & Petrochemicals Corp. Ltd.,Chemicals,DEEPAKFERT.NS
+128,Deepak Nitrite Ltd.,Chemicals,DEEPAKNTR.NS
+129,Delhivery Ltd.,Services,DELHIVERY.NS
+130,Delta Corp Ltd.,Consumer Services,DELTACORP.NS
+131,Devyani International Ltd.,Consumer Services,DEVYANI.NS
+132,Divi's Laboratories Ltd.,Healthcare,DIVISLAB.NS
+133,Dixon Technologies (India) Ltd.,Consumer Durables,DIXON.NS
+134,Dr. Lal Path Labs Ltd.,Healthcare,LALPATHLAB.NS
+135,Dr. Reddy's Laboratories Ltd.,Healthcare,DRREDDY.NS
+136,E.I.D. Parry (India) Ltd.,Chemicals,EIDPARRY.NS
+137,EIH Ltd.,Consumer Services,EIHOTEL.NS
+138,EPL Ltd.,Capital Goods,EPL.NS
+139,Easy Trip Planners Ltd.,Consumer Services,EASEMYTRIP.NS
+140,Eicher Motors Ltd.,Automobile and Auto Components,EICHERMOT.NS
+141,Elgi Equipments Ltd.,Capital Goods,ELGIEQUIP.NS
+142,Emami Ltd.,Fast Moving Consumer Goods,EMAMILTD.NS
+143,Endurance Technologies Ltd.,Automobile and Auto Components,ENDURANCE.NS
+144,Engineers India Ltd.,Construction,ENGINERSIN.NS
+145,Equitas Small Finance Bank Ltd.,Financial Services,EQUITASBNK.NS
+146,Eris Lifesciences Ltd.,Healthcare,ERIS.NS
+147,Escorts Kubota Ltd.,Capital Goods,ESCORTS.NS
+148,Exide Industries Ltd.,Automobile and Auto Components,EXIDEIND.NS
+149,FDC Ltd.,Healthcare,FDC.NS
+150,FSN E-Commerce Ventures Ltd.,Consumer Services,NYKAA.NS
+151,Federal Bank Ltd.,Financial Services,FEDERALBNK.NS
+152,Fertilisers and Chemicals Travancore Ltd.,Chemicals,FACT.NS
+153,Fine Organic Industries Ltd.,Chemicals,FINEORG.NS
+154,Finolex Cables Ltd.,Capital Goods,FINCABLES.NS
+155,Finolex Industries Ltd.,Capital Goods,FINPIPE.NS
+156,Firstsource Solutions Ltd.,Services,FSL.NS
+157,Five-Star Business Finance Ltd.,Financial Services,FIVESTAR.NS
+158,Fortis Healthcare Ltd.,Healthcare,FORTIS.NS
+159,G R Infraprojects Ltd.,Construction,GRINFRA.NS
+160,GAIL (India) Ltd.,Oil Gas & Consumable Fuels,GAIL.NS
+161,GMM Pfaudler Ltd.,Capital Goods,GMMPFAUDLR.NS
+162,GMR Airports Infrastructure Ltd.,Services,GMRINFRA.NS
+163,Galaxy Surfactants Ltd.,Chemicals,GALAXYSURF.NS
+164,Garware Technical Fibres Ltd.,Textiles,GARFIBRES.NS
+165,General Insurance Corporation of India,Financial Services,GICRE.NS
+166,Gland Pharma Ltd.,Healthcare,GLAND.NS
+167,Glaxosmithkline Pharmaceuticals Ltd.,Healthcare,GLAXO.NS
+168,Glenmark Pharmaceuticals Ltd.,Healthcare,GLENMARK.NS
+169,Global Health Ltd.,Healthcare,MEDANTA.NS
+170,Go Fashion (India) Ltd.,Consumer Services,GOCOLORS.NS
+171,Godfrey Phillips India Ltd.,Fast Moving Consumer Goods,GODFRYPHLP.NS
+172,Godrej Agrovet Ltd.,Fast Moving Consumer Goods,GODREJAGRO.NS
+173,Godrej Consumer Products Ltd.,Fast Moving Consumer Goods,GODREJCP.NS
+174,Godrej Industries Ltd.,Diversified,GODREJIND.NS
+175,Godrej Properties Ltd.,Realty,GODREJPROP.NS
+176,Granules India Ltd.,Healthcare,GRANULES.NS
+177,Graphite India Ltd.,Capital Goods,GRAPHITE.NS
+178,Grasim Industries Ltd.,Construction Materials,GRASIM.NS
+179,Great Eastern Shipping Co. Ltd.,Services,GESHIP.NS
+180,Greenpanel Industries Ltd.,Consumer Durables,GREENPANEL.NS
+181,Grindwell Norton Ltd.,Capital Goods,GRINDWELL.NS
+182,Gujarat Alkalies & Chemicals Ltd.,Chemicals,GUJALKALI.NS
+183,Gujarat Ambuja Exports Ltd.,Fast Moving Consumer Goods,GAEL.NS
+184,Gujarat Fluorochemicals Ltd.,Chemicals,FLUOROCHEM.NS
+185,Gujarat Gas Ltd.,Oil Gas & Consumable Fuels,GUJGASLTD.NS
+186,Gujarat Narmada Valley Fertilizers and Chemicals,Chemicals,GNFC.NS
+187,Gujarat Pipavav Port Ltd.,Services,GPPL.NS
+188,Gujarat State Fertilizers & Chemicals Ltd.,Chemicals,GSFC.NS
+189,Gujarat State Petronet Ltd.,Oil Gas & Consumable Fuels,GSPL.NS
+190,H.E.G. Ltd.,Capital Goods,HEG.NS
+191,HCL Technologies Ltd.,Information Technology,HCLTECH.NS
+192,HDFC Asset Management Company Ltd.,Financial Services,HDFCAMC.NS
+193,HDFC Bank Ltd.,Financial Services,HDFCBANK.NS
+194,HDFC Life Insurance Company Ltd.,Financial Services,HDFCLIFE.NS
+195,HFCL Ltd.,Telecommunication,HFCL.NS
+196,HLE Glascoat Ltd.,Capital Goods,HLEGLAS.NS
+197,Happiest Minds Technologies Ltd.,Information Technology,HAPPSTMNDS.NS
+198,Havells India Ltd.,Consumer Durables,HAVELLS.NS
+199,Hero MotoCorp Ltd.,Automobile and Auto Components,HEROMOTOCO.NS
+200,Hikal Ltd.,Healthcare,HIKAL.NS
+201,Hindalco Industries Ltd.,Metals & Mining,HINDALCO.NS
+202,Hinduja Global Solutions Ltd.,Services,HGS.NS
+203,Hindustan Aeronautics Ltd.,Capital Goods,HAL.NS
+204,Hindustan Copper Ltd.,Metals & Mining,HINDCOPPER.NS
+205,Hindustan Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,HINDPETRO.NS
+206,Hindustan Unilever Ltd.,Fast Moving Consumer Goods,HINDUNILVR.NS
+207,Hindustan Zinc Ltd.,Metals & Mining,HINDZINC.NS
+208,Hitachi Energy India Ltd.,Capital Goods,POWERINDIA.NS
+209,Home First Finance Company India Ltd.,Financial Services,HOMEFIRST.NS
+210,Honeywell Automation India Ltd.,Capital Goods,HONAUT.NS
+211,Housing & Urban Development Corporation Ltd.,Financial Services,HUDCO.NS
+212,Housing Development Finance Corporation Ltd.,Financial Services,HDFC.NS
+213,ICICI Bank Ltd.,Financial Services,ICICIBANK.NS
+214,ICICI Lombard General Insurance Company Ltd.,Financial Services,ICICIGI.NS
+215,ICICI Prudential Life Insurance Company Ltd.,Financial Services,ICICIPRULI.NS
+216,ICICI Securities Ltd.,Financial Services,ISEC.NS
+217,IDBI Bank Ltd.,Financial Services,IDBI.NS
+218,IDFC First Bank Ltd.,Financial Services,IDFCFIRSTB.NS
+219,IDFC Ltd.,Financial Services,IDFC.NS
+220,IFB Industries Ltd.,Consumer Durables,IFBIND.NS
+221,IIFL Finance Ltd.,Financial Services,IIFL.NS
+222,IRB Infrastructure Developers Ltd.,Construction,IRB.NS
+223,ITC Ltd.,Fast Moving Consumer Goods,ITC.NS
+224,ITI Ltd.,Telecommunication,ITI.NS
+225,India Cements Ltd.,Construction Materials,INDIACEM.NS
+226,Indiabulls Housing Finance Ltd.,Financial Services,IBULHSGFIN.NS
+227,Indiabulls Real Estate Ltd.,Realty,IBREALEST.NS
+228,Indiamart Intermesh Ltd.,Consumer Services,INDIAMART.NS
+229,Indian Bank,Financial Services,INDIANB.NS
+230,Indian Energy Exchange Ltd.,Financial Services,IEX.NS
+231,Indian Hotels Co. Ltd.,Consumer Services,INDHOTEL.NS
+232,Indian Oil Corporation Ltd.,Oil Gas & Consumable Fuels,IOC.NS
+233,Indian Overseas Bank,Financial Services,IOB.NS
+234,Indian Railway Catering And Tourism Corporation,Consumer Services,IRCTC.NS
+235,Indian Railway Finance Corporation Ltd.,Financial Services,IRFC.NS
+236,Indigo Paints Ltd.,Consumer Durables,INDIGOPNTS.NS
+237,Indraprastha Gas Ltd.,Oil Gas & Consumable Fuels,IGL.NS
+238,Indus Towers Ltd.,Telecommunication,INDUSTOWER.NS
+239,IndusInd Bank Ltd.,Financial Services,INDUSINDBK.NS
+240,Infibeam Avenues Ltd.,Financial Services,INFIBEAM.NS
+241,Info Edge (India) Ltd.,Consumer Services,NAUKRI.NS
+242,Infosys Ltd.,Information Technology,INFY.NS
+243,Ingersoll Rand (India) Ltd.,Capital Goods,INGERRAND.NS
+244,Intellect Design Arena Ltd.,Information Technology,INTELLECT.NS
+245,InterGlobe Aviation Ltd.,Services,INDIGO.NS
+246,Ipca Laboratories Ltd.,Healthcare,IPCALAB.NS
+247,J.B. Chemicals & Pharmaceuticals Ltd.,Healthcare,JBCHEPHARM.NS
+248,J.K. Cement Ltd.,Construction Materials,JKCEMENT.NS
+249,JBM Auto Ltd.,Automobile and Auto Components,JBMA.NS
+250,JK Lakshmi Cement Ltd.,Construction Materials,JKLAKSHMI.NS
+251,JK Paper Ltd.,Forest Materials,JKPAPER.NS
+252,JM Financial Ltd.,Financial Services,JMFINANCIL.NS
+253,JSW Energy Ltd.,Power,JSWENERGY.NS
+254,JSW Steel Ltd.,Metals & Mining,JSWSTEEL.NS
+255,Jamna Auto Industries Ltd.,Automobile and Auto Components,JAMNAAUTO.NS
+256,Jindal Stainless Ltd.,Metals & Mining,JSL.NS
+257,Jindal Steel & Power Ltd.,Metals & Mining,JINDALSTEL.NS
+258,Jindal Worldwide Ltd.,Textiles,JINDWORLD.NS
+259,Jubilant Foodworks Ltd.,Consumer Services,JUBLFOOD.NS
+260,Jubilant Ingrevia Ltd.,Chemicals,JUBLINGREA.NS
+261,Jubilant Pharmova Ltd.,Healthcare,JUBLPHARMA.NS
+262,Justdial Ltd.,Consumer Services,JUSTDIAL.NS
+263,Jyothy Labs Ltd.,Fast Moving Consumer Goods,JYOTHYLAB.NS
+264,K.P.R. Mill Ltd.,Textiles,KPRMILL.NS
+265,KEI Industries Ltd.,Capital Goods,KEI.NS
+266,KNR Constructions Ltd.,Construction,KNRCON.NS
+267,KPIT Technologies Ltd.,Information Technology,KPITTECH.NS
+268,KRBL Ltd.,Fast Moving Consumer Goods,KRBL.NS
+269,KSB Ltd.,Capital Goods,KSB.NS
+270,Kajaria Ceramics Ltd.,Consumer Durables,KAJARIACER.NS
+271,Kalpataru Projects International Ltd.,Construction,KPIL.NS
+272,Kalyan Jewellers India Ltd.,Consumer Durables,KALYANKJIL.NS
+273,Kansai Nerolac Paints Ltd.,Consumer Durables,KANSAINER.NS
+274,Karur Vysya Bank Ltd.,Financial Services,KARURVYSYA.NS
+275,Kec International Ltd.,Capital Goods,KEC.NS
+276,Kennametal India Ltd.,Capital Goods,KENNAMET.NS
+277,Keystone Realtors Ltd.,Realty,RUSTOMJEE.NS
+278,Kfin Technologies Ltd.,Financial Services,KFINTECH.NS
+279,Kotak Mahindra Bank Ltd.,Financial Services,KOTAKBANK.NS
+280,Krishna Institute of Medical Sciences Ltd.,Healthcare,KIMS.NS
+281,L&T Finance Holdings Ltd.,Financial Services,L&TFH.NS
+282,L&T Technology Services Ltd.,Information Technology,LTTS.NS
+283,LIC Housing Finance Ltd.,Financial Services,LICHSGFIN.NS
+284,LTIMindtree Ltd.,Information Technology,LTIM.NS
+285,Lakshmi Machine Works Ltd.,Capital Goods,LAXMIMACH.NS
+286,Larsen & Toubro Ltd.,Construction,LT.NS
+287,Latent View Analytics Ltd.,Information Technology,LATENTVIEW.NS
+288,Laurus Labs Ltd.,Healthcare,LAURUSLABS.NS
+289,Laxmi Organic Industries Ltd.,Chemicals,LXCHEM.NS
+290,Lemon Tree Hotels Ltd.,Consumer Services,LEMONTREE.NS
+291,Life Insurance Corporation of India,Financial Services,LICI.NS
+292,Linde India Ltd.,Chemicals,LINDEINDIA.NS
+293,Lupin Ltd.,Healthcare,LUPIN.NS
+294,Lux Industries Ltd.,Textiles,LUXIND.NS
+295,MMTC Ltd.,Services,MMTC.NS
+296,MRF Ltd.,Automobile and Auto Components,MRF.NS
+297,MTAR Technologies Ltd.,Capital Goods,MTARTECH.NS
+298,Macrotech Developers Ltd.,Realty,LODHA.NS
+299,Mahanagar Gas Ltd.,Oil Gas & Consumable Fuels,MGL.NS
+300,Mahindra & Mahindra Financial Services Ltd.,Financial Services,M&MFIN.NS
+301,Mahindra & Mahindra Ltd.,Automobile and Auto Components,M&M.NS
+302,Mahindra Holidays & Resorts India Ltd.,Consumer Services,MHRIL.NS
+303,Mahindra Lifespace Developers Ltd.,Realty,MAHLIFE.NS
+304,Mahindra Logistics Ltd.,Services,MAHLOG.NS
+305,Manappuram Finance Ltd.,Financial Services,MANAPPURAM.NS
+306,Mangalore Refinery & Petrochemicals Ltd.,Oil Gas & Consumable Fuels,MRPL.NS
+307,Marico Ltd.,Fast Moving Consumer Goods,MARICO.NS
+308,Maruti Suzuki India Ltd.,Automobile and Auto Components,MARUTI.NS
+309,Mastek Ltd.,Information Technology,MASTEK.NS
+310,Max Financial Services Ltd.,Financial Services,MFSL.NS
+311,Max Healthcare Institute Ltd.,Healthcare,MAXHEALTH.NS
+312,Mazagoan Dock Shipbuilders Ltd.,Capital Goods,MAZDOCK.NS
+313,Medplus Health Services Ltd.,Consumer Services,MEDPLUS.NS
+314,Meghmani Finechem Ltd.,Chemicals,MFL.NS
+315,Metro Brands Ltd.,Consumer Durables,METROBRAND.NS
+316,Metropolis Healthcare Ltd.,Healthcare,METROPOLIS.NS
+317,Motherson Sumi Wiring India Ltd.,Automobile and Auto Components,MSUMI.NS
+318,Motilal Oswal Financial Services Ltd.,Financial Services,MOTILALOFS.NS
+319,MphasiS Ltd.,Information Technology,MPHASIS.NS
+320,Multi Commodity Exchange of India Ltd.,Financial Services,MCX.NS
+321,Muthoot Finance Ltd.,Financial Services,MUTHOOTFIN.NS
+322,NATCO Pharma Ltd.,Healthcare,NATCOPHARM.NS
+323,NBCC (India) Ltd.,Construction,NBCC.NS
+324,NCC Ltd.,Construction,NCC.NS
+325,NHPC Ltd.,Power,NHPC.NS
+326,NLC India Ltd.,Power,NLCINDIA.NS
+327,NMDC Ltd.,Metals & Mining,NMDC.NS
+328,NMDC Steel Ltd.,Metals & Mining,NSLNISP.NS
+329,NOCIL Ltd.,Chemicals,NOCIL.NS
+330,NTPC Ltd.,Power,NTPC.NS
+331,Narayana Hrudayalaya Ltd.,Healthcare,NH.NS
+332,National Aluminium Co. Ltd.,Metals & Mining,NATIONALUM.NS
+333,Navin Fluorine International Ltd.,Chemicals,NAVINFLUOR.NS
+334,Nazara Technologies Ltd.,Media Entertainment & Publication,NAZARA.NS
+335,Nestle India Ltd.,Fast Moving Consumer Goods,NESTLEIND.NS
+336,Network18 Media & Investments Ltd.,Media Entertainment & Publication,NETWORK18.NS
+337,Nippon Life India Asset Management Ltd.,Financial Services,NAM-INDIA.NS
+338,Nuvoco Vistas Corporation Ltd.,Construction Materials,NUVOCO.NS
+339,Oberoi Realty Ltd.,Realty,OBEROIRLTY.NS
+340,Oil & Natural Gas Corporation Ltd.,Oil Gas & Consumable Fuels,ONGC.NS
+341,Oil India Ltd.,Oil Gas & Consumable Fuels,OIL.NS
+342,Olectra Greentech Ltd.,Automobile and Auto Components,OLECTRA.NS
+343,One 97 Communications Ltd.,Financial Services,PAYTM.NS
+344,Oracle Financial Services Software Ltd.,Information Technology,OFSS.NS
+345,Orient Electric Ltd.,Consumer Durables,ORIENTELEC.NS
+346,PB Fintech Ltd.,Financial Services,POLICYBZR.NS
+347,PCBL Ltd.,Chemicals,PCBL.NS
+348,PI Industries Ltd.,Chemicals,PIIND.NS
+349,PNB Housing Finance Ltd.,Financial Services,PNBHOUSING.NS
+350,PNC Infratech Ltd.,Construction,PNCINFRA.NS
+351,PVR INOX Ltd.,Media Entertainment & Publication,PVRINOX.NS
+352,Page Industries Ltd.,Textiles,PAGEIND.NS
+353,Patanjali Foods Ltd.,Fast Moving Consumer Goods,PATANJALI.NS
+354,Persistent Systems Ltd.,Information Technology,PERSISTENT.NS
+355,Petronet LNG Ltd.,Oil Gas & Consumable Fuels,PETRONET.NS
+356,Pfizer Ltd.,Healthcare,PFIZER.NS
+357,Phoenix Mills Ltd.,Realty,PHOENIXLTD.NS
+358,Pidilite Industries Ltd.,Chemicals,PIDILITIND.NS
+359,Piramal Enterprises Ltd.,Financial Services,PEL.NS
+360,Piramal Pharma Ltd.,Healthcare,PPLPHARMA.NS
+361,Poly Medicure Ltd.,Healthcare,POLYMED.NS
+362,Polycab India Ltd.,Capital Goods,POLYCAB.NS
+363,Polyplex Corporation Ltd.,Capital Goods,POLYPLEX.NS
+364,Poonawalla Fincorp Ltd.,Financial Services,POONAWALLA.NS
+365,Power Finance Corporation Ltd.,Financial Services,PFC.NS
+366,Power Grid Corporation of India Ltd.,Power,POWERGRID.NS
+367,Praj Industries Ltd.,Capital Goods,PRAJIND.NS
+368,Prestige Estates Projects Ltd.,Realty,PRESTIGE.NS
+369,Prince Pipes and Fittings Ltd.,Capital Goods,PRINCEPIPE.NS
+370,Prism Johnson Ltd.,Construction Materials,PRSMJOHNSN.NS
+371,Procter & Gamble Hygiene & Health Care Ltd.,Fast Moving Consumer Goods,PGHH.NS
+372,Punjab National Bank,Financial Services,PNB.NS
+373,Quess Corp Ltd.,Services,QUESS.NS
+374,RBL Bank Ltd.,Financial Services,RBLBANK.NS
+375,REC Ltd.,Financial Services,RECLTD.NS
+376,RHI MAGNESITA INDIA LTD.,Capital Goods,RHIM.NS
+377,RITES Ltd.,Construction,RITES.NS
+378,Radico Khaitan Ltd,Fast Moving Consumer Goods,RADICO.NS
+379,Rail Vikas Nigam Ltd.,Construction,RVNL.NS
+380,Rain Industries Ltd,Chemicals,RAIN.NS
+381,Rainbow Childrens Medicare Ltd.,Healthcare,RAINBOW.NS
+382,Rajesh Exports Ltd.,Consumer Durables,RAJESHEXPO.NS
+383,Rallis India Ltd.,Chemicals,RALLIS.NS
+384,Rashtriya Chemicals & Fertilizers Ltd.,Chemicals,RCF.NS
+385,Ratnamani Metals & Tubes Ltd.,Capital Goods,RATNAMANI.NS
+386,RattanIndia Enterprises Ltd.,Services,RTNINDIA.NS
+387,Raymond Ltd.,Textiles,RAYMOND.NS
+388,Redington Ltd.,Services,REDINGTON.NS
+389,Relaxo Footwears Ltd.,Consumer Durables,RELAXO.NS
+390,Reliance Industries Ltd.,Oil Gas & Consumable Fuels,RELIANCE.NS
+391,Restaurant Brands Asia Ltd.,Consumer Services,RBA.NS
+392,Rossari Biotech Ltd.,Chemicals,ROSSARI.NS
+393,Route Mobile Ltd.,Telecommunication,ROUTE.NS
+394,SBI Cards and Payment Services Ltd.,Financial Services,SBICARD.NS
+395,SBI Life Insurance Company Ltd.,Financial Services,SBILIFE.NS
+396,SJVN Ltd.,Power,SJVN.NS
+397,SKF India Ltd.,Capital Goods,SKFINDIA.NS
+398,SRF Ltd.,Chemicals,SRF.NS
+399,Samvardhana Motherson International Ltd.,Automobile and Auto Components,MOTHERSON.NS
+400,Sanofi India Ltd.,Healthcare,SANOFI.NS
+401,Sapphire Foods India Ltd.,Consumer Services,SAPPHIRE.NS
+402,Schaeffler India Ltd.,Automobile and Auto Components,SCHAEFFLER.NS
+403,Sharda Cropchem Ltd.,Chemicals,SHARDACROP.NS
+404,Shoppers Stop Ltd.,Consumer Services,SHOPERSTOP.NS
+405,Shree Cement Ltd.,Construction Materials,SHREECEM.NS
+406,Shree Renuka Sugars Ltd.,Fast Moving Consumer Goods,RENUKA.NS
+407,Shriram Finance Ltd.,Financial Services,SHRIRAMFIN.NS
+408,Shyam Metalics and Energy Ltd.,Metals & Mining,SHYAMMETL.NS
+409,Siemens Ltd.,Capital Goods,SIEMENS.NS
+410,Sobha Ltd.,Realty,SOBHA.NS
+411,Solar Industries India Ltd.,Chemicals,SOLARINDS.NS
+412,Sona BLW Precision Forgings Ltd.,Automobile and Auto Components,SONACOMS.NS
+413,Sonata Software Ltd.,Information Technology,SONATSOFTW.NS
+414,Star Health and Allied Insurance Company Ltd.,Financial Services,STARHEALTH.NS
+415,State Bank of India,Financial Services,SBIN.NS
+416,Steel Authority of India Ltd.,Metals & Mining,SAIL.NS
+417,Sterling and Wilson Renewable Energy Ltd.,Construction,SWSOLAR.NS
+418,Sterlite Technologies Ltd.,Telecommunication,STLTECH.NS
+419,Sumitomo Chemical India Ltd.,Chemicals,SUMICHEM.NS
+420,Sun Pharma Advanced Research Company Ltd.,Healthcare,SPARC.NS
+421,Sun Pharmaceutical Industries Ltd.,Healthcare,SUNPHARMA.NS
+422,Sun TV Network Ltd.,Media Entertainment & Publication,SUNTV.NS
+423,Sundaram Finance Ltd.,Financial Services,SUNDARMFIN.NS
+424,Sundram Fasteners Ltd.,Automobile and Auto Components,SUNDRMFAST.NS
+425,Sunteck Realty Ltd.,Realty,SUNTECK.NS
+426,Suprajit Engineering Ltd.,Automobile and Auto Components,SUPRAJIT.NS
+427,Supreme Industries Ltd.,Capital Goods,SUPREMEIND.NS
+428,Suven Pharmaceuticals Ltd.,Healthcare,SUVENPHAR.NS
+429,Suzlon Energy Ltd.,Capital Goods,SUZLON.NS
+430,Swan Energy Ltd.,Realty,SWANENERGY.NS
+431,Syngene International Ltd.,Healthcare,SYNGENE.NS
+432,TCI Express Ltd.,Services,TCIEXP.NS
+433,TCNS Clothing Co. Ltd.,Textiles,TCNSBRANDS.NS
+434,TTK Prestige Ltd.,Consumer Durables,TTKPRESTIG.NS
+435,TV18 Broadcast Ltd.,Media Entertainment & Publication,TV18BRDCST.NS
+436,TVS Motor Company Ltd.,Automobile and Auto Components,TVSMOTOR.NS
+437,Tamilnad Mercantile Bank Ltd.,Financial Services,TMB.NS
+438,Tanla Platforms Ltd.,Information Technology,TANLA.NS
+439,Tata Chemicals Ltd.,Chemicals,TATACHEM.NS
+440,Tata Communications Ltd.,Telecommunication,TATACOMM.NS
+441,Tata Consultancy Services Ltd.,Information Technology,TCS.NS
+442,Tata Consumer Products Ltd.,Fast Moving Consumer Goods,TATACONSUM.NS
+443,Tata Elxsi Ltd.,Information Technology,TATAELXSI.NS
+444,Tata Investment Corporation Ltd.,Financial Services,TATAINVEST.NS
+445,Tata Motors Ltd DVR,Automobile and Auto Components,TATAMTRDVR.NS
+446,Tata Motors Ltd.,Automobile and Auto Components,TATAMOTORS.NS
+447,Tata Power Co. Ltd.,Power,TATAPOWER.NS
+448,Tata Steel Ltd.,Metals & Mining,TATASTEEL.NS
+449,Tata Teleservices (Maharashtra) Ltd.,Telecommunication,TTML.NS
+450,Teamlease Services Ltd.,Services,TEAMLEASE.NS
+451,Tech Mahindra Ltd.,Information Technology,TECHM.NS
+452,Tejas Networks Ltd.,Telecommunication,TEJASNET.NS
+453,The New India Assurance Company Ltd.,Financial Services,NIACL.NS
+454,The Ramco Cements Ltd.,Construction Materials,RAMCOCEM.NS
+455,Thermax Ltd.,Capital Goods,THERMAX.NS
+456,Timken India Ltd.,Capital Goods,TIMKEN.NS
+457,Titan Company Ltd.,Consumer Durables,TITAN.NS
+458,Torrent Pharmaceuticals Ltd.,Healthcare,TORNTPHARM.NS
+459,Torrent Power Ltd.,Power,TORNTPOWER.NS
+460,Transport Corporation of India Ltd.,Services,TCI.NS
+461,Trent Ltd.,Consumer Services,TRENT.NS
+462,Trident Ltd.,Textiles,TRIDENT.NS
+463,Triveni Engineering & Industries Ltd.,Fast Moving Consumer Goods,TRIVENI.NS
+464,Triveni Turbine Ltd.,Capital Goods,TRITURBINE.NS
+465,Tube Investments of India Ltd.,Automobile and Auto Components,TIINDIA.NS
+466,UCO Bank,Financial Services,UCOBANK.NS
+467,UFLEX Ltd.,Capital Goods,UFLEX.NS
+468,UNO Minda Ltd.,Automobile and Auto Components,UNOMINDA.NS
+469,UPL Ltd.,Chemicals,UPL.NS
+470,UTI Asset Management Company Ltd.,Financial Services,UTIAMC.NS
+471,UltraTech Cement Ltd.,Construction Materials,ULTRACEMCO.NS
+472,Union Bank of India,Financial Services,UNIONBANK.NS
+473,United Breweries Ltd.,Fast Moving Consumer Goods,UBL.NS
+474,United Spirits Ltd.,Fast Moving Consumer Goods,MCDOWELL-N.NS
+475,V-Guard Industries Ltd.,Consumer Durables,VGUARD.NS
+476,V-Mart Retail Ltd.,Consumer Services,VMART.NS
+477,V.I.P. Industries Ltd.,Consumer Durables,VIPIND.NS
+478,Vaibhav Global Ltd.,Consumer Durables,VAIBHAVGBL.NS
+479,Vardhman Textiles Ltd.,Textiles,VTL.NS
+480,Varroc Engineering Ltd.,Automobile and Auto Components,VARROC.NS
+481,Varun Beverages Ltd.,Fast Moving Consumer Goods,VBL.NS
+482,Vedant Fashions Ltd.,Consumer Services,MANYAVAR.NS
+483,Vedanta Ltd.,Metals & Mining,VEDL.NS
+484,Vijaya Diagnostic Centre Ltd.,Healthcare,VIJAYA.NS
+485,Vinati Organics Ltd.,Chemicals,VINATIORGA.NS
+486,Vodafone Idea Ltd.,Telecommunication,IDEA.NS
+487,Voltas Ltd.,Consumer Durables,VOLTAS.NS
+488,Welspun Corp Ltd.,Capital Goods,WELCORP.NS
+489,Welspun India Ltd.,Textiles,WELSPUNIND.NS
+490,Westlife Foodworld Ltd.,Consumer Services,WESTLIFE.NS
+491,Whirlpool of India Ltd.,Consumer Durables,WHIRLPOOL.NS
+492,Wipro Ltd.,Information Technology,WIPRO.NS
+493,Yes Bank Ltd.,Financial Services,YESBANK.NS
+494,ZF Commercial Vehicle Control Systems India Ltd.,Automobile and Auto Components,ZFCVINDIA.NS
+495,Zee Entertainment Enterprises Ltd.,Media Entertainment & Publication,ZEEL.NS
+496,Zensar Technolgies Ltd.,Information Technology,ZENSARTECH.NS
+497,Zomato Ltd.,Consumer Services,ZOMATO.NS
+498,Zydus Lifesciences Ltd.,Healthcare,ZYDUSLIFE.NS
+499,Zydus Wellness Ltd.,Fast Moving Consumer Goods,ZYDUSWELL.NS
+500,eClerx Services Ltd.,Services,nan.NS

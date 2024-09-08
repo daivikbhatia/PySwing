@@ -15,11 +15,13 @@
 
 ## Introduction
 
-This Repository uses simple moving average (SMA) crossovers to select stocks in Nifty500. The SMAs are selected after backtesting on last 3 years of data. We use yfinance to download the data. 
+**This project is intended for analysis purposes only and should not be considered as trading advice!**
+
+This Repository uses simple moving average (SMA) crossovers to select stocks in Nifty500. The SMAs are selected after backtesting on last 3 years of data. We use yfinance to download the data.
 
 Why SMA crossover?
 
-We tested different technical indicators like RSI, Support resistance, etc. SMA crossover gave the best results after backtesting. 
+We tested different technical indicators like RSI, Support resistance, etc. SMA crossover gave the best results after backtesting.
 
 The SMA results are posted daily on my discord group mentioned below:
 https://discord.gg/ZWKJ6FXM
@@ -30,9 +32,9 @@ Below is an example of the result that is published to discord daily
 
 ![alt text](crossover_table.png)
 
-1) **stockname:** The name of the stock.
+1) **stockName:** The name of the stock.
 2) **stock industry:** Industry of that stock.
-3) **net_industry_change:** Percentage change in that industry(nifty 500 stocks only) in last 20 days 
+3) **net_industry_change:** Percentage change in that industry(nifty 500 stocks only) in last 20 days
 4) **strat_count:** number of different SMA crossovers on which stock is listed today.
 5) **strat_res_count_stock:** Stock performance results for last 1 year on current start_count SMA strategies.
 6) **stat_res_mean_stock** Average profit made on start_count SMA strategies.
@@ -52,17 +54,31 @@ Below is an example of the result that is published to discord daily
 20) **run_date:** Pipeline run date.
 
 ## Installation
+Install ta-lib as a prerequisite.\
+For example for macos:
+```
+brew install ta-lib
+```
+Follow below steps for installation. We recommend using Anaconda.
 
 ```
-    git clone: https://github.com/daivikbhatia/swing_trading.git 
-    cd project-name
+    git clone: https://github.com/daivikbhatia/swing_trading.git
+    cd swing_trading
+
+    conda create -n trading_env python=3.9
+    conda activate trading_env
+    pip install -r requirements.txt
+
 ```
 
 
 ## Usage
-
-Put your own discord bot token in discord_bot.py
-Run main_run.sh to run the essential scripts that will generate the image dataframe.
+Please note that the below script will try to download a large input csv file. This file contains all the backtesting results.\
+Run the below script to run entire pipeline:
+```
+cd scripts
+./main_run.sh
+```
 
 ## License
 
@@ -77,6 +93,6 @@ We use GNU GENERAL PUBLIC LICENSE
 
 ## Word from me
 
-I started this project because of passion for coding, data science, and trading. I take daily trades from my discord channel based on this project and additional analysis. So far the trades taken from this have been profitable for me. THIS IS NOT A TRADING TIP or ADVICE. My dream for this project is to add a lot more functionality, features and usecases.
+I started this project out of a passion for coding, data science, and trading. My vision for this project is to continue expanding it with more functionality, features, and use cases.
 
 Happy coding!

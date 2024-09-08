@@ -1,5 +1,10 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$SCRIPT_DIR"
 
-/Users/dtgs/anaconda3/bin/python3 /Users/dtgs/Documents/run_equity_stocks/crossover_trading_res.py
-/Users/dtgs/anaconda3/bin/python3 /Users/dtgs/Documents/run_equity_stocks/discord_bot.py
+python "$BASE_DIR/download_multiprocess.py"
+python "$BASE_DIR/run_fundamentals.py"
+python "$BASE_DIR/daily_crossover.py"
+python "$BASE_DIR/crossover_trading_res.py"
+python "$BASE_DIR/discord_bot.py"
