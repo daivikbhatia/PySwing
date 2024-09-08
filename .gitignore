@@ -40,10 +40,6 @@ venv.bak/
 # Log files
 *.log
 
-# Ignore any files in the data directory except input files
-data/*
-!data/input/
-
 # Ignore secret files
 *.env
 
