@@ -9,11 +9,18 @@ from datetime import datetime, timedelta
 
 
 class DataHandler:
+    """
+    This class contains all the helper functions
+    needed by different scripts in the pipeline.
+    """
     def __init__(self):
         pass
 
     @staticmethod
     def log_error(e):
+        """
+        This functions logs the error messages.
+        """
         tb = traceback.TracebackException.from_exception(e)
         error_details = {
             "file_name": tb.stack[-1].filename,
@@ -26,6 +33,11 @@ class DataHandler:
     
     @staticmethod
     def symbol_maker(stocks_file):
+        """
+        This function takes a csv file containing stock symbol names as input (.NS for NSE).
+        It adds a suffix at end of each symbol. 
+        This suffix helps yfinance to identify stock's category (NSE, BSE, etc)
+        """
         nse = pd.read_csv(stocks_file)
         nse_list = list(nse["Symbol"])
         nse_list_final = []
@@ -38,6 +50,9 @@ class DataHandler:
     
     @staticmethod
     def preprocess_data(df):
+        """
+        This functions convert Technical indicator's value to float.
+        """
         df = df.dropna()
         df["is_5_rising"] = df["is_5_rising"].astype(float)
         df["is_20_rising"] = df["is_20_rising"].astype(float)
@@ -45,11 +60,20 @@ class DataHandler:
 
     @staticmethod
     def split_date(date_str):
+        """
+        This function splits the date.
+        """
         date = str(date_str).split()[0]
         return pd.to_datetime(date)
     
     @staticmethod
     def calculate_week_and_day(df):
+        """
+        This functions takes df as input and process the date column by
+        converting date to dateTime object, adding week number (week of the year)
+        and day number (day of the week).
+
+        """
         df["date"] = pd.to_datetime(df["date"])
         df["week_number"] = df["date"].apply(lambda x: x.isocalendar()[1])
         df["day_number"] = df["date"].apply(lambda x: x.isocalendar()[2])
@@ -57,12 +81,18 @@ class DataHandler:
     
     @staticmethod
     def date_20_days_from_now():
+        """
+        This functions return a date that was 20 days from today.
+        """
         today = datetime.today()
         past_date = today - timedelta(days=20)
         return past_date.strftime('%Y-%m-%d')
     
     @staticmethod
     def add_hpt(temp):
+        """
+        This function combines sma and ema to a list.
+        """
         temp["hpt_sma"] = "empty"
         temp.reset_index(drop=True, inplace=True)
         for index, row in temp.iterrows():
@@ -74,6 +104,9 @@ class DataHandler:
     
     @staticmethod
     def reset_dataFrames():
+        """
+        This functions deletes all the previous data in the dataFrames of data/processed directory
+        """
         pd.DataFrame(columns= ['week_number', 'stockName', 'date', 'budget', 'loss_affordable',
        'number_of_loses', 'per_trade_loss', 'stock_entry', 'stop_loss',
        'rupee_stop', 'quantity', 'target', 'total_buy_amount',
@@ -95,6 +128,9 @@ class DataHandler:
 
 
 class Strategy(DataHandler):
+    """
+    This class contains all the Technical analysis strategies.
+    """
     def __init__(self, sma, ema, atr_rot, sma_len, ema_len, before_co):
         super().__init__()
         self.sma = sma
@@ -106,6 +142,10 @@ class Strategy(DataHandler):
 
 
     def moving_average_crossover_signal(self, MA_44, MA_200, window=4, percentage_margin=0.015):
+        """
+        If the output of this function is true then there is a crossover about to happen
+        or has recently happened for the input stock on the input moving averages.
+        """
         try:
             crossover_signal = False 
             #print("this is BEFORE CO",self.before_co)
@@ -136,6 +176,9 @@ class Strategy(DataHandler):
     
     @staticmethod
     def adx_signal(data):
+        """
+        This function calculates the ADX for the given stock.
+        """
         try:
             adx = talib.ADX(data["High"], data["Low"], data["Close"], timeperiod=14)
 
@@ -146,6 +189,9 @@ class Strategy(DataHandler):
     
     @staticmethod
     def di_signals(data, buy_flag=True):
+        """
+        This function calculates the DI signals for the given stock.
+        """
         try:
             plus_di = talib.PLUS_DI(data["High"], data["Low"], data["Close"], timeperiod=14)
             minus_di = talib.MINUS_DI(data["High"], data["Low"], data["Close"], timeperiod=14)
@@ -158,6 +204,9 @@ class Strategy(DataHandler):
 
     @staticmethod    
     def split_date(x):
+        """
+        This function splits the date.
+        """
         x = str(x)
         date = x.split()[0]
         date = pd.to_datetime(date)
@@ -165,6 +214,9 @@ class Strategy(DataHandler):
     
     @staticmethod
     def is_always_falling_with_small_lows(lis, rot_ind):
+        """
+        If the output of this function is true then the moving average is falling.
+        """
         try:
             for i in range(1, len(lis)):
                 if lis[i] > lis[i - 1]:
@@ -175,6 +227,9 @@ class Strategy(DataHandler):
     
     @staticmethod
     def is_always_rising_with_small_lows(data, lis, base, rot_ind=0.01):
+        """
+        If the output of this function is true then the moving average is rising.
+        """
         try:
             fin_res = 0
             rising_array = []
@@ -197,6 +252,7 @@ class Strategy(DataHandler):
 
     @staticmethod
     def sma_builder(x):
+
         y = []
         x = eval(x)
         y.append(x[0])
@@ -205,6 +261,9 @@ class Strategy(DataHandler):
 
     @staticmethod
     def net_change_fn(df):
+        """
+        This function adds the net_change column to dataFrame.
+        """
         res_df = pd.DataFrame()
         for stockName in list(df["stock"].unique()):
             temp_df = df.loc[df["stock"] == stockName]
@@ -212,11 +271,10 @@ class Strategy(DataHandler):
             res_df = pd.concat([res_df, temp_df])
         return res_df
     
-    def test(self, meaw, atr_rot):
-        res = meaw + atr_rot
-        return res
-    
     def investment(self,df,atr_rot):
+        """
+        This function adds all the investment columns to the dataFrame.
+        """
         try:
             df["stockName"] = df["ticker_name"]
             df["budget"] = 45000

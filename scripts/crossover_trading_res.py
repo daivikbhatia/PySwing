@@ -10,6 +10,9 @@ from _utils import DataHandler
 
 
 class FinalProcessing(DataHandler):
+    """
+    This class takes the output of daily_crossover and converts it into a final readable image.
+    """
     def __init__(self, buy_df, main_df, allTime_buy, st_1, god_df, stock_df, fun_df):
         super().__init__()
         self.buy_df = buy_df
@@ -22,6 +25,9 @@ class FinalProcessing(DataHandler):
         self.today = DataHandler.date_20_days_from_now()
 
     def get_net_change(self, df):
+        """
+        This function defines how the industry has changed in last 20 days.
+        """
         df = df.merge(self.stock_df, on="stock", how="outer")
         df["net_change"] = "empty"
         df = DataHandler.net_change_fn(df)
@@ -34,6 +40,10 @@ class FinalProcessing(DataHandler):
         return change_df
 
     def backTest_analysis_result(self, stock, old_date):
+        """
+        This function does all the post processing on the output data
+        and converts the final result to a dataFrame.
+        """
         change_df = self.get_net_change(self.main_df)
         strat_count = self.buy_df.loc[self.buy_df["stockName"] == stock].shape[0]
         current_smas = str(
@@ -96,6 +106,10 @@ class FinalProcessing(DataHandler):
         return decision_df
 
     def main(self):
+        """
+        This function does all the post processing on the output data
+        and converts the final result to an image data/processed/crossover_table.png.
+        """
         self.buy_df["smas"] = self.buy_df["hpt_list"].apply(DataHandler.sma_builder)
         self.buy_df = self.buy_df.sort_values(["stockName", "smas"])
         self.buy_df = self.buy_df.groupby(["stockName", "smas"]).first().reset_index()

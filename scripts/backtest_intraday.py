@@ -11,6 +11,9 @@ warnings.filterwarnings("ignore")
 
 
 class BackTestEngine(Strategy, DataHandler):
+    """
+    This class contains the entire backtesting code.
+    """
     def __init__(
         self, start_date, sma, ema, atr_rot, sma_len, ema_len, before_co, df, final_df
     ):
@@ -21,6 +24,9 @@ class BackTestEngine(Strategy, DataHandler):
         self.final_df = final_df
 
     def run_bactTest(self):
+        """
+        This function runs the main backtesting
+        """
         try:
             self.final_df = self.preprocess_data(self.final_df)
             buy_filter_df = self.final_df.loc[
@@ -42,6 +48,9 @@ class BackTestEngine(Strategy, DataHandler):
             DataHandler.log_error(e)
 
     def calculate_results(self, finalBuy_df):
+        """
+        This function calculates the results like past profit, loss, exits, etc.
+        """
         try:
             self.df = self.df.rename(columns={"stock": "stockName", "Date": "date"})
 
@@ -206,6 +215,9 @@ class BackTestEngine(Strategy, DataHandler):
         return investment_results_df, monthly_df, finalBuy_df
 
     def save_results(self, investment_results_df, monthly_df, finalBuy_df):
+        """
+        This function saves the backtesting tables to the data/processed folder.
+        """
         try:
             investment_results_df.to_csv(
                 "../data/processed/investment_results.csv", mode="a", header=False
@@ -222,6 +234,10 @@ class BackTestEngine(Strategy, DataHandler):
 
 
 class TradingEngine(Strategy):
+    """
+    This is the main trading engine class that performs
+    all the technical analysis on stocks input
+    """
     def __init__(
         self, sma, ema, atr_rot, sma_len, ema_len, before_co, nse_list_final, mains_df
     ):
@@ -230,6 +246,9 @@ class TradingEngine(Strategy):
         self.mains_df = mains_df
 
     def main_engine(self):
+        """
+        This is the main trading function.
+        """
         try:
             all_df = pd.DataFrame()
             for ticker in self.nse_list_final:

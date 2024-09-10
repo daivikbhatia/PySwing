@@ -11,6 +11,9 @@ import time
 
 
 def main_crossover_fn(the_strats):
+    """
+    This function runs the entire SMA crossover strategy for given SMAs and stocks data.
+    """
     count = 0
     nse = pd.read_csv("../data/input/ind_nifty500list.csv")
     nse_list = list(nse["Symbol"])
