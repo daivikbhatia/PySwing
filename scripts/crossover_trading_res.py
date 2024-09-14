@@ -1,4 +1,4 @@
-#
+#SettingWithCopyWarning
 # License: See LICENSE.md file
 # GitHub: https://github.com/daivikbhatia/swing_trading
 #
@@ -7,20 +7,24 @@ import yfinance as yf
 import datetime as dt
 import dataframe_image as dfi
 from _utils import DataHandler
+import warnings
+warnings.simplefilter(action='ignore', category=pd.errors.SettingWithCopyWarning)
+warnings.simplefilter(action='ignore', category=DeprecationWarning)
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
 class FinalProcessing(DataHandler):
     """
     This class takes the output of daily_crossover and converts it into a final readable image.
     """
-    def __init__(self, buy_df, main_df, allTime_buy, st_1, god_df, stock_df, fun_df):
+    def __init__(self, buy_df, main_df, allTime_buy, st_1, god_df, sector_df, fun_df):
         super().__init__()
         self.buy_df = buy_df
         self.main_df = main_df
         self.allTime_buy = allTime_buy
         self.st_1 = st_1
         self.god_df = god_df
-        self.stock_df = stock_df
+        self.sector_df = sector_df
         self.fun_df = fun_df
         self.today = DataHandler.date_20_days_from_now()
 
@@ -28,9 +32,16 @@ class FinalProcessing(DataHandler):
         """
         This function defines how the industry has changed in last 20 days.
         """
-        df = df.merge(self.stock_df, on="stock", how="outer")
+        df = df.rename(columns={"stock":"stockName"})
+        df = df.merge(self.sector_df, on="stockName", how="outer")
         df["net_change"] = "empty"
-        df = DataHandler.net_change_fn(df)
+        res_df = pd.DataFrame()
+        for stockName in list(df["stockName"].unique()):
+            temp_df = df.loc[df["stockName"] == stockName]
+            temp_df["net_change"] = temp_df["Close"].pct_change()
+            res_df = pd.concat([res_df, temp_df])
+        df = res_df
+        
         change_df = (
             df.groupby(["Industry", "Date"])
             .mean()
@@ -49,6 +60,7 @@ class FinalProcessing(DataHandler):
         current_smas = str(
             list(self.buy_df.loc[self.buy_df["stockName"] == stock]["smas"])
         )
+        self.allTime_buy = self.allTime_buy.rename(columns={"stockname":"stockName"})
         temps = self.allTime_buy.loc[self.allTime_buy["stockName"] == stock]
         self.stock_df = pd.DataFrame()
         for i in list(self.buy_df.loc[self.buy_df["stockName"] == stock]["hpt_list"]):
@@ -115,8 +127,8 @@ class FinalProcessing(DataHandler):
         self.buy_df = self.buy_df.groupby(["stockName", "smas"]).first().reset_index()
         self.buy_df = self.buy_df.sort_values(["stockName", "date"], ascending=False)
 
-        self.stock_df.rename(columns={"stock": "stockName"}, inplace=True)
-        self.buy_df = self.buy_df.merge(self.stock_df, on="stockName", how="inner")
+        self.sector_df.rename(columns={"stock": "stockName"}, inplace=True)
+        self.buy_df = self.buy_df.merge(self.sector_df, on="stockName", how="inner")
 
         recent_stocks = list(
             set(list(self.buy_df.loc[self.buy_df["date"] >= self.today]["stockName"]))
@@ -181,13 +193,16 @@ class FinalProcessing(DataHandler):
 if __name__ == "__main__":
     buy_df = pd.read_csv("../data/processed/main_buyit.csv", index_col=0)
     main_df = pd.read_csv("../data/processed/main_stock_df.csv", index_col=0)
-    stock_df = pd.read_csv("../data/input/sectordf.csv", index_col=0)
+    sector_df = pd.read_csv("../data/input/sectordf.csv", index_col=0)
     allTime_buy = pd.read_csv("../data/input/main_buyit_jan_2024.csv", index_col=0)
     st_1 = pd.read_csv("../data/input/final_stratergy_jan_2024.csv", index_col=0)
     god_df = pd.read_csv("../data/input/investment_results_jan_2024.csv", index_col=0)
     fun_df = pd.read_csv("../data/processed/fundamentals_res.csv", index_col=0)
+    fun_df = fun_df.reset_index()
+    fun_df = fun_df.rename(columns={"Stock Name":"stockName"})
 
     final_process = FinalProcessing(
-        buy_df, main_df, allTime_buy, st_1, god_df, stock_df, fun_df
+        buy_df=buy_df, main_df=main_df, allTime_buy=allTime_buy,
+          st_1=st_1, god_df=god_df, sector_df=sector_df, fun_df=fun_df
     )
     final_process.main()

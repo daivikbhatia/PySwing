@@ -5,3 +5,4 @@ discord.py==2.2.2
 ta-lib==0.4.32
 gdown==5.2.0
 dataframe_image==0.2.4
+matplotlib==3.4.3

@@ -6,6 +6,7 @@ import traceback
 import talib
 import pandas as pd
 from datetime import datetime, timedelta
+pd.options.mode.chained_assignment
 
 
 class DataHandler:
@@ -101,6 +102,15 @@ class DataHandler:
             hpt.append(row["ema"])
             temp.loc[index, "hpt_sma"] = str(hpt)
         return temp
+    
+    @staticmethod
+    def sma_builder(x):
+
+        y = []
+        x = eval(x)
+        y.append(x[0])
+        y.append(x[1])
+        return str(y)
     
     @staticmethod
     def reset_dataFrames():
@@ -249,27 +259,6 @@ class Strategy(DataHandler):
             return float(fin_res)
         except Exception as e:
             DataHandler.log_error(e)
-
-    @staticmethod
-    def sma_builder(x):
-
-        y = []
-        x = eval(x)
-        y.append(x[0])
-        y.append(x[1])
-        return str(y)
-
-    @staticmethod
-    def net_change_fn(df):
-        """
-        This function adds the net_change column to dataFrame.
-        """
-        res_df = pd.DataFrame()
-        for stockName in list(df["stock"].unique()):
-            temp_df = df.loc[df["stock"] == stockName]
-            temp_df["net_change"] = temp_df["Close"].pct_change()
-            res_df = pd.concat([res_df, temp_df])
-        return res_df
     
     def investment(self,df,atr_rot):
         """
