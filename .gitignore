@@ -1,0 +1,68 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Log files
+*.log
+
+# Ignore secret files
+*.env
+
+# Ignore Python package files
+*.whl
+*.egg
+*.manifest
+*.spec
+
+# Ignore any temporary or backup files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Ignore any test cache or coverage files
+.tox/
+.nox/
+.coverage
+*.cover
+coverage.xml
+*.py,cover
+
+# Ignore pyproject.toml file
+pyproject.toml
+
