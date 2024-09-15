@@ -1,6 +1,6 @@
 #SettingWithCopyWarning
 # License: See LICENSE.md file
-# GitHub: https://github.com/daivikbhatia/swing_trading
+# GitHub: https://github.com/daivikbhatia/PySwing
 #
 import pandas as pd
 import yfinance as yf

@@ -1,7 +1,7 @@
-# Swing_trading
+# PySwing
 
 ## Table of Contents
-- [Swing\_trading](#swing_trading)
+- [Swing\_trading](#PySwing)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Features](#features)
@@ -62,8 +62,8 @@ brew install ta-lib
 Follow below steps for installation. We recommend using Anaconda.
 
 ```
-    git clone: https://github.com/daivikbhatia/swing_trading.git
-    cd swing_trading
+    git clone: https://github.com/daivikbhatia/PySwing.git
+    cd PySwing
 
     conda create -n trading_env python=3.9
     conda activate trading_env
