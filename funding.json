@@ -1,0 +1,63 @@
+{
+    "version": "v1.0.0",
+    "entity": {
+        "type": "individual",                     
+        "role": "owner",                     
+        "name": "Daivik Bhatia",                     
+        "email": "daivikbhatia12@gmail.com",                    
+        "phone": "",              
+        "description": "I'm a developer who wants to make high level Stock Market analysis open source.\n This includes creating powerful market analysis features accessible to all.\n Every trader/analyst thinks differently so I want to create an ecosystem where everyone can share/develop their ideas and everybody else test/utilize them. \n I have created a base and included my first idea, anyone can access and try it. \n I want all interested people to do same so we can make a brilliant community. \n Stock Market is a pool where there is something for everyone.",
+        "webpageUrl": {
+            "url": "https://github.com/daivikbhatia",          
+            "wellKnown": ""
+        }
+    },
+    "projects": [{
+        "guid": "py-swing",                     
+        "name": "PySwing",                     
+        "description": "This project uses simple moving average (SMA) crossovers to select stocks in Nifty500. The SMAs are selected after backtesting on last 3 years of data. \n We use yfinance python API to download the data. \n Why SMA crossover? \n We tested different technical indicators like RSI, Support resistance, etc. SMA crossover gave the best results after backtesting. \n The SMA results are posted daily on my discord group mentioned below: https://discord.gg/ZWKJ6FXM ",              
+        "webpageUrl": {
+            "url": "https://github.com/daivikbhatia/PySwing/blob/main/README.md",                  
+            "wellKnown": ""
+        },
+        "repositoryUrl": {
+            "url": "https://github.com/daivikbhatia/PySwing/tree/main",                  
+            "wellKnown": ""            
+        },
+        "licenses": ["GPL-3.0 license"],                 
+        "tags": ["stock market analysis","data analysis", "pandas", "python", "data science", "backtesting", "technical analysis", "fundamental analysis", "programming"]
+    }],
+    "funding": {
+        "channels": [{
+            "guid": "mybank",                 
+            "type": "bank",                 
+            "address": "",              
+            "description": "Will accept direct bank transfers. Please e-mail me for details."          
+        }],
+        "plans": [
+            {
+            "guid": "developer-time",                 
+            "status": "active",               
+            "name": "Developer compensation",                 
+            "description": "This will cover the cost of one developer working part-time on the projects.",          
+            "amount": 1000,                
+            "currency": "USD",             
+            "frequency": "monthly",            
+            "channels": ["mybank"]
+        },
+        {
+            "guid": "angel-plan",
+            "status": "active",
+            "name": "Goodwill plan",
+            "description": "Pay anything you wish to show your goodwill for the project.",
+            "amount": 0,
+            "currency": "USD",
+            "frequency": "one-time",
+            "channels": ["mybank"]
+        }
+            
+
+        ]
+    }
+}
+
