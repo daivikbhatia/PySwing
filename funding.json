@@ -22,7 +22,7 @@
             "url": "https://github.com/daivikbhatia/PySwing"              
         },
         "licenses": ["GPL-3.0 license"],                 
-        "tags": ["stock market analysis","data analysis", "pandas", "python", "data science", "backtesting", "technical analysis", "fundamental analysis", "programming"]
+        "tags": ["stock-market-analysis","data-analysis", "pandas", "python", "data-science", "backtesting", "technical-analysis", "fundamental-analysis", "programming"]
     }],
     "funding": {
         "channels": [{
